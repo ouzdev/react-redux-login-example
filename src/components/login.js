@@ -11,7 +11,6 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { login } from '../features/loginSlice';
 import { useDispatch } from 'react-redux';
 
@@ -28,7 +27,6 @@ function Copyright(props) {
   );
 }
 
-const theme = createTheme();
 
 export default function Login() {
 
@@ -52,7 +50,7 @@ export default function Login() {
 
 
   return (
-    <ThemeProvider theme={theme}>
+      
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -130,6 +128,5 @@ export default function Login() {
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
-    </ThemeProvider>
   );
 }
